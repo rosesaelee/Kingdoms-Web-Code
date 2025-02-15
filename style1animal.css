@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+body{
+    background-color: #010302;
+    margin :0;
+    font-family: 'Josefin Sans', sans-serif;    font-size: 15px;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+.container{
+    overflow: hidden;
+    height: max-content;
+
+}
+.banner{
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+.banner .bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center bottom;
+    transition: 0.1s;
+}
+.banner .bg:nth-child(1){
+    background-image: url(image/sky.png);
+}
+.banner .bg:nth-child(2){
+    background-image: url(image/banner2.1.png);
+}
+.banner .bg:nth-child(3){
+    top: 32%;
+    text-align: center;
+} 
+.banner .bg:nth-child(3) h1, 
+.banner .bg:nth-child(3) h5
+{
+    color: #f0f1e4;
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0 0px 20px #e6deb7;
+}
+.banner .bg:nth-child(3) h1
+{
+    font-size: 11vw;
+}
+.banner .bg:nth-child(4){
+    background-image: url(image/hill-right-1.png);
+}
+.banner .bg:nth-child(5){
+    background-image: url(image/hill-left-1.png);
+}
+.tab{
+    min-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tab::before{
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(
+        to top, #010302, transparent
+    );
+    content: '';
+    bottom: 100%;
+    left: 0;
+}
+.tab.tab2{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(image/tab1.jpg);
+}
+.tab.tab1{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(image/tab2.jpg);
+}
+.tab.tab3{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(image/tab1.jpg);
+}
+.tab.tab4{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(image/tab1.jpg);
+}
+.tab.tab2 .content{
+    width: 700px;
+    max-width: 90%;
+    color: #eee;
+}
+.tab.tab1 .content{
+    color: #eee;
+    width: 900px;
+    max-width: 90%;
+}
+.tab.tab3 .content{
+    width: 700px;
+    max-width: 90%;
+    color: #eee;
+}
+.tab.tab4 .content{
+    width: 700px;
+    max-width: 90%;
+    color: #eee;
+}
+.tab.tab1 .content .des{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, margin(200px, 1fr))
+}
+
+.slider2{
+    margin: 0;
+    background-image: url(image/tab2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider2::-webkit-scrollbar{
+    width: 0;
+    border-radius: 0%;
+}
+.slider2 .form2{
+    width: max-content;
+    --left: 0;
+    transform: translateX(var(--left));
+}
+.title2{
+    padding: 20px 0;
+    color: #fff;
+    text-shadow: 0 0 10px #0007;
+    font-weight: 500;
+    font-size: large;
+}
+.title2 button{
+    border-radius: 20px;
+    border: none;
+    font-family: system-ui;
+}
+.slider2 .form2 .item2{
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 20px;
+    transform: perspective(10px);
+    transform-style: preserve-3d;
+    align-items: center;
+}
+.slider2 .form2 .item2 .content2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s;
+}
+.slider2 .form2 .item2 .content2 .des2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: monospace;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.slider2 .form2 .item2 .content2 .des2 button{
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    font-size: small;
+}
+.slider2 .form2.left2 .item2 .content2{
+    transform: rotateY(-1deg) scale(0.8);
+}
+.slider2 .form2.right .item2 .content2{
+    transform: rotateY(1deg) scale(0.8);
+}
+.slider2 .form2 .item2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
